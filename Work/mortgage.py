@@ -20,7 +20,7 @@ while principal > 0:
     if extra_payment_start_month <= months and months <= extra_payment_end_month:
         principal -= extra_payment
         total_paid = total_paid + extra_payment
-   # print(months, total_paid, principal, payment)
-    print(months, round(total_paid,2), round(principal,2), payment)
+    print(f'Month: {months:5d}  Total Paid: {total_paid:10.2f}  Pricipal: {principal:10.2f}')
+    #print(months, round(total_paid,2), round(principal,2), payment)
 print('Total paid', round(total_paid,2))
 print(months)
