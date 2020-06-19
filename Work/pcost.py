@@ -2,6 +2,12 @@
 #
 # Exercise 1.27
 import csv
+import sys
+
+'''
+Computes the total cost (shares*price) of a portfolio file
+'''
+
 def portfolio_cost(filename): 
     try:
         shares = 0
@@ -18,6 +24,12 @@ def portfolio_cost(filename):
         f.close()
         return total
     except ValueError:
-        print("Doesn't look good, dawg", line)
-cost = portfolio_cost('Data/portfolio.csv')
+        print("Doesn't look good", line)
+
+if len(sys.argv)== 2:
+    filename = sys.argv[1]
+else:
+    filename = 'Data/portfolio.csv'
+
+cost = portfolio_cost(filename)
 print('Total cost: ', cost)
